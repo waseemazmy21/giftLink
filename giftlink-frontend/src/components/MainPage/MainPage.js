@@ -17,7 +17,7 @@ function MainPage() {
           throw new Error(`HTTP error; ${response.status}`);
         }
         const data = await response.json();
-        setGifts(data);
+        setGifts(data.gifts);
       } catch (error) {
         console.log("Fetch error: " + error.message);
       }
